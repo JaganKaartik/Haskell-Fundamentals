@@ -2,15 +2,15 @@
 
 -- A fucntion is said to be a higher order fucntion if it returns a fucntion or accepts a function as its parameter.
 
--- Map using List Comprehension
+-- Filter using List Comprehension
 
-maplc'::(a->b)->[a]->[b]
-maplc' f xs = [f x| x <- xs]
+filterlc::(a->Bool)->[a]->[a]
+filterlc p xs = [ x| x <- xs, p x]
 
--- Map using Recursion
+-- Filter using Recursion
 
-maprec::(a->b)->[a]->[b]
-maprec f [] = []
-maprec f (x:xs) = f x : map f xs
-
-
+filterec::(a->Bool)->[a]->[a]
+filterec p [] = []
+filterec p (x:xs) 
+       | p x = x : filterec p xs
+       | otherwise = filterec p xs
