@@ -33,5 +33,3 @@ map2 f = foldr (\x xs -> f x : xs) []
 -- First list value is important!
 
 f = "Haskell is awesome"
-
-
