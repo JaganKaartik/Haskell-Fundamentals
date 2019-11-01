@@ -23,4 +23,3 @@ cubesWFunc = takeWhile (<1000) $ map (^3) [1..]
 
 let (fw, rest) = span (/=' ') "This is a sentence" in "First word:" ++ fw ++ ", the rest:" ++ rest  
 "First word: This, the rest: is a sentence"  
-
