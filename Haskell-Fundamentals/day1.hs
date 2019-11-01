@@ -23,3 +23,15 @@ filter' p = foldr (\x xs -> if p x then x : xs else xs) []
 fil::(a->Bool)->[a]->[a]
 fil p [] = []
 fil p (x:xs) = if p x then x : fil p xs else fil p xs
+
+-- Custom Map using foldr
+
+map2::(a->b)->[a]->[b]
+map2 f = foldr (\x xs -> f x : xs) []
+
+-- Issue with TakeWhile
+-- First list value is important!
+
+f = "Haskell is awesome"
+
+
