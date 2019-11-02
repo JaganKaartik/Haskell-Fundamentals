@@ -1,4 +1,4 @@
--- Take While Using Foldr
+-- Take While implemented using Foldr
 
 myTakeWhile' f xs = foldl (\rs x -> if f x then x:rs else []) [] (reverse xs)
 
@@ -30,6 +30,7 @@ map2::(a->b)->[a]->[b]
 map2 f = foldr (\x xs -> f x : xs) []
 
 -- Issue with TakeWhile
+
 -- First list value is important!
 
 f = "Haskell is awesome"
